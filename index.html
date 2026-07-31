@@ -8,9 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -36,9 +34,33 @@
                         <li class="nav-item"><a class="nav-link text-light" href="#antojo">CREA TU ANTOJO</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="#promociones">PROMOCIONES</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="#menu">MENÚ</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#contacto">CONTACTO</a></li>
-                        <li class="nav-item ms-lg-3">
-                            <a href="#reservar" class="btn btn-warning fw-bold text-dark px-3 py-2">TU PEDIDO AQUÍ</a>
+                        
+                        <li class="nav-item dropdown ms-lg-3 position-relative">
+                            <a href="#" class="btn btn-warning fw-bold text-dark px-3 py-2 dropdown-toggle" id="dropdownCarrito" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg width="20" height="20" viewBox="0 0 15 15" class="me-1" style="vertical-align: middle;">
+                                    <path fill="currentColor" d="M13.2 1.5s-1.391-.041-1.946.5c-.534.52-.754.918-.754 2H1.2l1.394 4.814l.013.022c.235.657.848 1.13 1.579 1.158l.013.006h6.5v.2s.001.3-.199.7s-.3.6-1.1.6H2.9c-1 0-1 1.5 0 1.5h6.4c1.2 0 2.1-.7 2.4-1.4s.3-1.3.3-1.3V4c0-.524.229-1 .7-1h.55a.75.75 0 0 0 0-1.5zM9.2 13c-.6 0-1 .4-1 1s.4 1 1 1s1-.4 1-1s-.4-1-1-1m-5 0c-.6 0-1 .4-1 1s.4 1 1 1s1-.4 1-1s-.4-1-1-1" />
+                                </svg>
+                                TU PEDIDO
+                            </a>
+
+                            <div id="carrito" class="dropdown-menu dropdown-menu-end p-3 shadow-lg rounded-4" style="min-width: 320px;" aria-labelledby="dropdownCarrito">
+                                <table id="lista-carrito" class="table align-middle mb-2">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+
+                                <div class="d-flex justify-content-between align-items-center border-top pt-2">
+                                    <h6 class="mb-0 fw-bold">Total: <span id="total-carrito" class="text-danger">$0</span>[cite: 1]</h6>
+                                    <a href="#" id="vaciar-carrito" class="btn btn-sm btn-outline-danger">Vaciar</a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -87,21 +109,15 @@
         </div>
     </section>
 
-  <!-- ===== SECCIÓN FAVORITOS ===== -->
     <section class="py-5" id="favoritos">
         <div class="container text-center">
-
-            <!-- TÍTULO -->
             <p class="text-uppercase small">Lo mejor de nuestra cocina</p>
             <h2 class="fw-bold mb-5">Nuestros Favoritos</h2>
 
-            <!-- GRID RESPONSIVE -->
             <div class="row g-4">
-
-                <!-- ITEM -->
                 <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0">
-                        <img src="https://plus.unsplash.com/premium_photo-1681406995086-e60e5c306e6c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Tacos al pastor">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://plus.unsplash.com/premium_photo-1681406995086-e60e5c306e6c?q=80&w=687&auto=format&fit=crop" class="card-img-top" alt="Tacos al pastor">
                         <div class="card-body">
                             <h6 class="fw-bold">Tacos al pastor</h6>
                             <p class="small">Carne marinada con piña y especias.</p>
@@ -109,10 +125,9 @@
                     </div>
                 </article>
 
-                <!-- ITEM -->
                 <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0">
-                        <img src="https://plus.unsplash.com/premium_photo-1681406689584-2f7612fa98a4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Guacamole">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://plus.unsplash.com/premium_photo-1681406689584-2f7612fa98a4?q=80&w=687&auto=format&fit=crop" class="card-img-top" alt="Guacamole">
                         <div class="card-body">
                             <h6 class="fw-bold">Guacamole</h6>
                             <p class="small">Aguacate fresco con limón.</p>
@@ -120,9 +135,8 @@
                     </div>
                 </article>
 
-                <!-- ITEM -->
                 <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-0 shadow-sm">
                         <img src="https://images.pexels.com/photos/9772454/pexels-photo-9772454.jpeg" class="card-img-top" alt="Enchiladas">
                         <div class="card-body">
                             <h6 class="fw-bold">Enchiladas</h6>
@@ -131,9 +145,8 @@
                     </div>
                 </article>
 
-                <!-- ITEM -->
                 <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-0 shadow-sm">
                         <img src="https://images.pexels.com/photos/16235561/pexels-photo-16235561.jpeg" class="card-img-top" alt="Pozole">
                         <div class="card-body">
                             <h6 class="fw-bold">Pozole</h6>
@@ -142,9 +155,8 @@
                     </div>
                 </article>
 
-                <!-- ITEM -->
                 <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-0 shadow-sm">
                         <img src="https://images.pexels.com/photos/32351725/pexels-photo-32351725.jpeg" class="card-img-top" alt="Quesadillas">
                         <div class="card-body">
                             <h6 class="fw-bold">Quesadillas</h6>
@@ -153,9 +165,8 @@
                     </div>
                 </article>
 
-                <!-- ITEM -->
                 <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-0 shadow-sm">
                         <img src="https://images.pexels.com/photos/37543728/pexels-photo-37543728.jpeg" class="card-img-top" alt="Churros">
                         <div class="card-body">
                             <h6 class="fw-bold">Churros</h6>
@@ -163,75 +174,58 @@
                         </div>
                     </div>
                 </article>
-
             </div>
-
-           
         </div>
     </section>
 
+    <main class="products container py-5" id="menu">
+        <h2 class="text-center mb-4" style="font-family: var(--fuente-titulos);">Productos</h2>
 
-
-
-
-
-<!-- ===== CINTA ===== -->
-<div class="cinta-mexicana"></div>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer-mexicano text-white">
-
-    <div class="container">
-
-        <div class="row text-center text-md-start align-items-start">
-
-            <!-- 🌮 COLUMNA 1 -->
-            <div class="col-12 col-md-4 mb-4">
-                <img src="/imagenes/logofiesta.png" class="logo-footer mb-3" alt="LOGO">
-                <p class="slogan">
-                    Sabor, tradición y pasión en cada bocado.
-                </p>
-            </div>
-
-            <!-- 📌 COLUMNA 2 -->
-            <div class="col-12 col-md-4 mb-4">
-                <h5 class="subtitulo">Explora</h5>
-                <ul class="list-unstyled footer-links">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Menú</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-
-            <!-- 📍 COLUMNA 3 -->
-            <div class="col-12 col-md-4 mb-4">
-                <h5 class="subtitulo">Contacto</h5>
-                <p class="mb-1">📍 Colombia</p>
-                <p class="mb-1">📞 +52 123 456 789</p>
-                <p class="mb-1">✉️ contacto@lafiesta.com</p>
-            </div>
-
+        <div class="box-container" id="lista-1">
         </div>
 
-        <!-- COPY -->
-        <div class="text-center pt-3 border-top copy">
-            © 2026 La Fiesta - Hecho con ❤️ en México
+        <div class="text-center mt-4">
+            <div class="btn btn-warning fw-bold px-4 py-2 text-dark shadow-sm" id="load-more" style="cursor: pointer; display: inline-block;">Cargar mas</div>
         </div>
+    </main>
 
-    </div>
+    <div class="cinta-mexicana"></div>
 
-</footer>
+    <footer class="footer-mexicano text-white py-4">
+        <div class="container">
+            <div class="row text-center text-md-start align-items-start">
+                <div class="col-12 col-md-4 mb-4">
+                    <img src="imagenes/logofiesta.png" class="logo-footer mb-3" alt="LOGO" style="max-width: 120px;">
+                    <p class="slogan">
+                        Sabor, tradición y pasión en cada bocado.
+                    </p>
+                </div>
 
+                <div class="col-12 col-md-4 mb-4">
+                    <h5 class="subtitulo">Explora</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#inicio" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="#menu" class="text-white text-decoration-none">Menú</a></li>
+                        <li><a href="#contacto" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
 
+                <div class="col-12 col-md-4 mb-4">
+                    <h5 class="subtitulo">Contacto</h5>
+                    <p class="mb-1">📍 Colombia</p>
+                    <p class="mb-1">📞 +52 123 456 789</p>
+                    <p class="mb-1">✉️ contacto@lafiesta.com</p>
+                </div>
+            </div>
 
-
-
-
+            <div class="text-center pt-3 border-top copy">
+                © 2026 La Fiesta - Hecho con ❤️ en México
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
+    <script src="script.js"></script>
 
 </body>
 
