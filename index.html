@@ -17,9 +17,9 @@
     <header class="header-principal sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark px-4 py-3">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                    <span class="marca fw-bold text-warning">LA FIESTA</span>
-                    <span class="submarca text-light small">COCINA MEXICANA</span>
+                <!-- Logo limpio en la Navbar -->
+                <a class="navbar-brand py-0" href="#">
+                    <img src="imagenes/logofiesta.png" alt="La Fiesta - Cocina Mexicana" style="height: 45px; width: auto;">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -57,7 +57,7 @@
                                 </table>
 
                                 <div class="d-flex justify-content-between align-items-center border-top pt-2">
-                                    <h6 class="mb-0 fw-bold">Total: <span id="total-carrito" class="text-danger">$0</span>[cite: 1]</h6>
+                                    <h6 class="mb-0 fw-bold">Total: <span id="total-carrito" class="text-danger">$0</span></h6>
                                     <a href="#" id="vaciar-carrito" class="btn btn-sm btn-outline-danger">Vaciar</a>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
                     </p>
                     <div class="d-flex gap-3 flex-wrap">
                         <a href="#menu" class="btn btn-warning fw-bold px-4 py-3 text-dark">VER MENÚ 📖</a>
-                        <a href="#ubicacion" class="btn btn-outline-warning fw-bold px-4 py-3">📍 CÓMO LLEGAR</a>
+                        <a href="#contacto" class="btn btn-outline-warning fw-bold px-4 py-3">📍 CÓMO LLEGAR</a>
                     </div>
                 </div>
             </div>
@@ -109,79 +109,27 @@
         </div>
     </section>
 
-    <section class="py-5" id="favoritos">
-        <div class="container text-center">
-            <p class="text-uppercase small">Lo mejor de nuestra cocina</p>
-            <h2 class="fw-bold mb-5">Nuestros Favoritos</h2>
+    <!-- Sección Crea tu Antojo -->
+    <section id="antojo" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-3" style="font-family: var(--fuente-titulos);">Crea tu Antojo</h2>
+            <p class="text-muted lead">Personaliza tus tacos o burritos con tus ingredientes favoritos paso a paso.</p>
+            <div class="alert alert-warning d-inline-block mt-2">¡Próximamente disponible el creador interactivo!</div>
+        </div>
+    </section>
 
-            <div class="row g-4">
-                <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://plus.unsplash.com/premium_photo-1681406995086-e60e5c306e6c?q=80&w=687&auto=format&fit=crop" class="card-img-top" alt="Tacos al pastor">
-                        <div class="card-body">
-                            <h6 class="fw-bold">Tacos al pastor</h6>
-                            <p class="small">Carne marinada con piña y especias.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://plus.unsplash.com/premium_photo-1681406689584-2f7612fa98a4?q=80&w=687&auto=format&fit=crop" class="card-img-top" alt="Guacamole">
-                        <div class="card-body">
-                            <h6 class="fw-bold">Guacamole</h6>
-                            <p class="small">Aguacate fresco con limón.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://images.pexels.com/photos/9772454/pexels-photo-9772454.jpeg" class="card-img-top" alt="Enchiladas">
-                        <div class="card-body">
-                            <h6 class="fw-bold">Enchiladas</h6>
-                            <p class="small">Tortillas con salsa tradicional.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://images.pexels.com/photos/16235561/pexels-photo-16235561.jpeg" class="card-img-top" alt="Pozole">
-                        <div class="card-body">
-                            <h6 class="fw-bold">Pozole</h6>
-                            <p class="small">Caldo típico con maíz.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://images.pexels.com/photos/32351725/pexels-photo-32351725.jpeg" class="card-img-top" alt="Quesadillas">
-                        <div class="card-body">
-                            <h6 class="fw-bold">Quesadillas</h6>
-                            <p class="small">Rellenas de queso fundido.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://images.pexels.com/photos/37543728/pexels-photo-37543728.jpeg" class="card-img-top" alt="Churros">
-                        <div class="card-body">
-                            <h6 class="fw-bold">Churros</h6>
-                            <p class="small">Crujientes con nutella.</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
+    <!-- Sección Promociones -->
+    <section id="promociones" class="py-5 text-center bg-dark text-white">
+        <div class="container">
+            <h2 class="fw-bold text-warning mb-3" style="font-family: var(--fuente-titulos);">Promociones Especiales</h2>
+            <p class="lead">¡Disfruta de nuestros martes de 2x1 en Tacos al pastor y Margaritas tradicionales!</p>
         </div>
     </section>
 
     <main class="products container py-5" id="menu">
-        <h2 class="text-center mb-4" style="font-family: var(--fuente-titulos);">Productos</h2>
+        <h2 class="text-center mb-4" style="font-family: var(--fuente-titulos);">Menú de Productos</h2>
 
-        <div class="box-container" id="lista-1">
+        <div class="box-container row justify-content-center" id="lista-1">
         </div>
 
         <div class="text-center mt-4">
@@ -191,17 +139,18 @@
 
     <div class="cinta-mexicana"></div>
 
-    <footer class="footer-mexicano text-white py-4">
+    <footer class="footer-mexicano text-white py-4" id="contacto">
         <div class="container">
-            <div class="row text-center text-md-start align-items-start">
-                <div class="col-12 col-md-4 mb-4">
-                    <img src="imagenes/logofiesta.png" class="logo-footer mb-3" alt="LOGO" style="max-width: 120px;">
+            <div class="row text-center text-md-start align-items-center">
+                <div class="col-12 col-md-4 mb-4 text-center text-md-start">
+                    <!-- Logo GRANDE en el footer con fondo blanco para que resalte perfectamente -->
+                    <img src="imagenes/logofiesta.png" class="logo-footer mb-3 bg-white p-2 rounded shadow" alt="La Fiesta - Logo" style="max-width: 210px; width: 100%; height: auto;">
                     <p class="slogan">
                         Sabor, tradición y pasión en cada bocado.
                     </p>
                 </div>
 
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-12 col-md-4 mb-4 text-center text-md-start">
                     <h5 class="subtitulo">Explora</h5>
                     <ul class="list-unstyled footer-links">
                         <li><a href="#inicio" class="text-white text-decoration-none">Inicio</a></li>
@@ -210,7 +159,7 @@
                     </ul>
                 </div>
 
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-12 col-md-4 mb-4 text-center text-md-start">
                     <h5 class="subtitulo">Contacto</h5>
                     <p class="mb-1">📍 Colombia</p>
                     <p class="mb-1">📞 +52 123 456 789</p>
@@ -219,7 +168,7 @@
             </div>
 
             <div class="text-center pt-3 border-top copy">
-                © 2026 La Fiesta - Hecho con ❤️ en México
+                © 2026 La Fiesta - Hecho con ❤️ en Colombia desde México con amor
             </div>
         </div>
     </footer>
