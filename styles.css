@@ -7,15 +7,29 @@
     --color-texto-principal: #2B1810; 
     --color-texto-secundario: #6B4C3E;
     --color-borde-suave: #E6D5C3;   
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-cuerpo: 'Poppins', sans-serif;
 }
 
 body {
     background-color: var(--color-fondo-claro);
     color: var(--color-texto-principal);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--fuente-cuerpo);
 }
 
-/* Estilos de la Barra de Navegación */
+h1, h2, h3, .navbar-brand .marca {
+    font-family: var(--fuente-titulos);
+}
+
+p, a {
+    font-family: var(--fuente-cuerpo);
+}
+
+.navbar-brand .marca {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
 .header-principal {
     background-color: var(--color-primario-oscuro);
     border-bottom: 3px solid var(--color-acento-amarillo);
@@ -53,7 +67,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 82vh;
-    color: var(--color-texto-claro);
 }
 
 .hero-banner h1 {
@@ -89,24 +102,6 @@ body {
     color: var(--color-texto-principal);
 }
 
-:root {
-    --fuente-titulos: 'Playfair Display', serif;
-    --fuente-cuerpo: 'Poppins', sans-serif;
-}
-
-body, .navbar, p, a {
-    font-family: var(--fuente-cuerpo);
-}
-
-h1, h2, h3, .navbar-brand .marca {
-    font-family: var(--fuente-titulos);
-}
-
-.navbar-brand .marca {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-}
-
 .historia-banner {
     background-image: url('https://img.magnific.com/vector-gratis/fondo-plano-celebracion-independencia-mexico_52683-88679.jpg?semt=ais_hybrid');
     background-size: cover;
@@ -120,25 +115,19 @@ h1, h2, h3, .navbar-brand .marca {
     z-index: 1;
 }
 
-
-
-
-
-
-
 .card {
     background-color: var(--color-tarjeta);
     border: 1px solid var(--color-borde-suave);
     border-radius: 12px;
+    width: 100%;
+}
 
-      width: 100%;
-    height: 250px;        /* MISMO alto para todas */
-    object-fit: cover;    /* recorta sin deformar */
+.card img {
+    height: 250px;
+    object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
-
 
 .btn {
     background-color: var(--color-secundario);
@@ -150,9 +139,6 @@ h1, h2, h3, .navbar-brand .marca {
     background-color: var(--color-primario-oscuro);
 }
 
-
-
-/* ===== CINTA MÉXICO ===== */
 .cinta-mexicana {
     height: 8px;
     background: linear-gradient(
@@ -162,21 +148,22 @@ h1, h2, h3, .navbar-brand .marca {
         #ce1126
     );
 }
+
 .footer-mexicano {
-    background:  var(--color-primario-oscuro);
+    background: var(--color-primario-oscuro);
     color: white;
     padding: 60px 0;
     position: relative;
     overflow: hidden;
 }
 
-/* LOGO CONTROLADO */
 .logo-footer {
-    max-width: 160px;
+    max-width: 210px;
+    width: 100%;
     height: auto;
+    padding-bottom: 15px;
 }
 
-/* PAPEL PICADO */
 .footer-mexicano::before {
     content: "";
     position: absolute;
@@ -193,19 +180,16 @@ h1, h2, h3, .navbar-brand .marca {
     to { background-position: 200px 0; }
 }
 
-/* TITULOS */
 .subtitulo {
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-/* SLOGAN */
 .slogan {
     color: #ccc;
     margin-bottom: 0;
 }
 
-/* LINKS LIMPIOS */
 .footer-links li {
     margin-bottom: 8px;
 }
@@ -220,7 +204,6 @@ h1, h2, h3, .navbar-brand .marca {
     color: #ce1126;
 }
 
-/* COPY */
 .copy {
     margin-top: 20px;
     font-size: 0.9rem;
@@ -228,12 +211,8 @@ h1, h2, h3, .navbar-brand .marca {
     width: 100%;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     .logo-footer {
-        max-width: 120px;
+        max-width: 150px;
     }
-}
-.logo-footer{
-    padding-bottom: 15px;
 }
