@@ -1,6 +1,6 @@
 # Hackaton-Landingpage-Grupo9
 
-🌮 Landing Page – Tienda Online Mexicana
+🌮 Landing Page – Tienda Online LA FIESTA Cocina Mexicana
 
 Página web que permite explorar productos, agregarlos a un carrito y mantenerlos guardados aunque se recargue la página.
 
