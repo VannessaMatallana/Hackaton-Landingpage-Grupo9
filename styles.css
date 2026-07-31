@@ -210,3 +210,124 @@ h1, h2, h3, .navbar-brand .marca {
     background-color: rgb(242, 98, 46);
 }
 
+:root {
+    --color-primario-oscuro: #5C1D13; 
+    --color-secundario: #D96B27;      
+    --color-acento-amarillo: #F2A922; 
+    --color-fondo-claro: #FDFBF7;     
+    --color-tarjeta: #FFF9F0;         
+    --color-texto-principal: #2B1810; 
+    --color-texto-secundario: #6B4C3E;
+    --color-borde-suave: #E6D5C3;   
+}
+
+body {
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos de la Barra de Navegación */
+.header-principal {
+    background-color: var(--color-primario-oscuro);
+    border-bottom: 3px solid var(--color-acento-amarillo);
+    box-shadow: 0 4px 6px rgba(43, 24, 16, 0.15);
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-fondo-claro) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-acento-amarillo) !important;
+}
+
+.header-principal .btn-warning {
+    background-color: var(--color-acento-amarillo);
+    border-color: var(--color-acento-amarillo);
+    color: var(--color-texto-principal) !important;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-principal .btn-warning:hover {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+}
+
+.hero-banner {
+    background-image: url('imagenes/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 82vh;
+    color: var(--color-texto-claro);
+}
+
+.hero-banner h1 {
+    color: var(--color-tarjeta);
+    font-weight: 800;
+}
+
+.hero-banner p {
+    color: var(--color-borde-suave);
+}
+
+.hero-banner .btn-warning {
+    background-color: var(--color-secundario);
+    border: none;
+    color: #FFFFFF !important;
+    transition: background-color 0.3s ease;
+}
+
+.hero-banner .btn-warning:hover {
+    background-color: var(--color-primario-oscuro);
+    border: 1px solid var(--color-acento-amarillo);
+    color: var(--color-acento-amarillo) !important;
+}
+
+.hero-banner .btn-outline-warning {
+    border: 2px solid var(--color-acento-amarillo);
+    color: var(--color-acento-amarillo);
+    transition: all 0.3s ease;
+}
+
+.hero-banner .btn-outline-warning:hover {
+    background-color: var(--color-acento-amarillo);
+    color: var(--color-texto-principal);
+}
+
+:root {
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-cuerpo: 'Poppins', sans-serif;
+}
+
+body, .navbar, p, a {
+    font-family: var(--fuente-cuerpo);
+}
+
+h1, h2, h3, .navbar-brand .marca {
+    font-family: var(--fuente-titulos);
+}
+
+.navbar-brand .marca {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.historia-banner {
+    background-image: url('https://img.magnific.com/vector-gratis/fondo-plano-celebracion-independencia-mexico_52683-88679.jpg?semt=ais_hybrid');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.historia-overlay {
+    background: linear-gradient(135deg, rgba(43, 24, 16, 0.85) 0%, rgba(92, 29, 19, 0.85) 100%);
+    z-index: 1;
+}
