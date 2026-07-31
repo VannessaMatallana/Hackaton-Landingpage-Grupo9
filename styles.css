@@ -119,3 +119,121 @@ h1, h2, h3, .navbar-brand .marca {
     background: linear-gradient(135deg, rgba(43, 24, 16, 0.85) 0%, rgba(92, 29, 19, 0.85) 100%);
     z-index: 1;
 }
+
+
+
+
+
+
+
+.card {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 12px;
+
+      width: 100%;
+    height: 250px;        /* MISMO alto para todas */
+    object-fit: cover;    /* recorta sin deformar */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+
+.btn {
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--color-primario-oscuro);
+}
+
+
+
+/* ===== CINTA MÉXICO ===== */
+.cinta-mexicana {
+    height: 8px;
+    background: linear-gradient(
+        to right,
+        #006847,
+        white,
+        #ce1126
+    );
+}
+.footer-mexicano {
+    background:  var(--color-primario-oscuro);
+    color: white;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* LOGO CONTROLADO */
+.logo-footer {
+    max-width: 160px;
+    height: auto;
+}
+
+/* PAPEL PICADO */
+.footer-mexicano::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-image: url("https://plus.unsplash.com/premium_photo-1678481247337-5658fd2db71e?q=80&w=1170&auto=format&fit=crop");
+    opacity: 0.1;
+    animation: mover 15s linear infinite;
+}
+
+@keyframes mover {
+    from { background-position: 0 0; }
+    to { background-position: 200px 0; }
+}
+
+/* TITULOS */
+.subtitulo {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* SLOGAN */
+.slogan {
+    color: #ccc;
+    margin-bottom: 0;
+}
+
+/* LINKS LIMPIOS */
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: #ce1126;
+}
+
+/* COPY */
+.copy {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .logo-footer {
+        max-width: 120px;
+    }
+}
+.logo-footer{
+    padding-bottom: 15px;
+}
