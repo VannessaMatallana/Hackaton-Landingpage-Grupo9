@@ -17,15 +17,9 @@
     <header class="header-principal sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark px-4 py-3">
             <div class="container-fluid">
-<<<<<<< HEAD
                 <!-- Logo limpio en la Navbar -->
-                <a class="navbar-brand py-0" href="#">
-                    <img src="imagenes/logo.png" alt="La Fiesta - Cocina Mexicana" style="height: 45px; width: auto;">
-=======
-                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                    <span class="marca fw-bold text-warning">LA FIESTA</span>
-                    <span class="submarca text-light small">COCINA MEXICANA</span>
->>>>>>> ef4e3f8 (Actualizar)
+                <a class="navbar-brand py-0 d-flex align-items-center" href="#" style="height: 45px;">
+                    <img src="imagenes/logo.png" alt="La Fiesta - Cocina Mexicana" class="h-100 w-auto">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -41,8 +35,9 @@
                         <li class="nav-item"><a class="nav-link text-light" href="#promociones">PROMOCIONES</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="#menu">MENÚ</a></li>
                         
-                        <li class="nav-item dropdown ms-lg-3 position-relative">
-                            <a href="#" class="btn btn-warning fw-bold text-dark px-3 py-2 dropdown-toggle" id="dropdownCarrito" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- Carrito / Pedido -->
+                        <li class="nav-item dropdown ms-lg-3 position-relative" id="carrito-container">
+                            <a href="#" class="btn btn-warning fw-bold text-dark px-3 py-2 dropdown-toggle" id="dropdownCarrito" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                 <svg width="20" height="20" viewBox="0 0 15 15" class="me-1" style="vertical-align: middle;">
                                     <path fill="currentColor" d="M13.2 1.5s-1.391-.041-1.946.5c-.534.52-.754.918-.754 2H1.2l1.394 4.814l.013.022c.235.657.848 1.13 1.579 1.158l.013.006h6.5v.2s.001.3-.199.7s-.3.6-1.1.6H2.9c-1 0-1 1.5 0 1.5h6.4c1.2 0 2.1-.7 2.4-1.4s.3-1.3.3-1.3V4c0-.524.229-1 .7-1h.55a.75.75 0 0 0 0-1.5zM9.2 13c-.6 0-1 .4-1 1s.4 1 1 1s1-.4 1-1s-.4-1-1-1m-5 0c-.6 0-1 .4-1 1s.4 1 1 1s1-.4 1-1s-.4-1-1-1" />
                                 </svg>
@@ -134,11 +129,12 @@
 
     <main class="products container py-5" id="menu">
         <h2 class="text-center mb-4" style="font-family: var(--fuente-titulos);">Menú de Productos</h2>
-
         <div class="box-container row justify-content-center" id="lista-1">
+            <!-- Los productos se cargan dinámicamente -->
         </div>
-
-
+        <div class="text-center mt-4">
+            <button id="load-more" class="btn btn-warning fw-bold px-4 py-2 text-dark">Cargar más</button>
+        </div>
     </main>
 
     <div class="cinta-mexicana"></div>
@@ -147,7 +143,6 @@
         <div class="container">
             <div class="row text-center text-md-start align-items-center">
                 <div class="col-12 col-md-4 mb-4 text-center text-md-start">
-                    <!-- Logo GRANDE en el footer con fondo blanco para que resalte perfectamente -->
                     <img src="imagenes/logo.png" class="logo-footer mb-3 bg-white p-2 rounded shadow" alt="La Fiesta - Logo" style="max-width: 210px; width: 100%; height: auto;">
                     <p class="slogan">
                         Sabor, tradición y pasión en cada bocado.

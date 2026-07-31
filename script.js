@@ -76,11 +76,14 @@ const productos = [
 
 let carrito = [];
 const listaProductos = document.getElementById("lista-1");
+const carritoDOM = document.getElementById("carrito");
+const lista = document.querySelector("#lista-carrito tbody");
+const vaciarCarritoBtn = document.getElementById("vaciar-carrito");
+const totalCarrito = document.getElementById("total-carrito");
 
 function mostrarProductos() {
     listaProductos.innerHTML = "";
     productos.forEach((producto, index) => {
-        // Los productos cuyo índice sea mayor o igual a 4 se ocultan inicialmente
         let estiloOculto = index >= currenItem ? 'style="display: none;"' : '';
         
         listaProductos.innerHTML += `
@@ -103,29 +106,27 @@ function mostrarProductos() {
 
 mostrarProductos();
 
-// Lógica del botón Cargar Más
-loadMoreBtn.onclick = () => {
-    let boxes = [...document.querySelectorAll(".box-container .box")];
+// Lógica del botón Cargar Más corregida
+if (loadMoreBtn) {
+    loadMoreBtn.onclick = (e) => {
+        e.preventDefault();
+        let boxes = [...document.querySelectorAll(".box-container .box")];
 
-    for (let i = currenItem; i < currenItem + 4 && i < boxes.length; i++) {
-        boxes[i].style.display = "flex";
-    }
-    currenItem += 4;
+        for (let i = currenItem; i < currenItem + 4 && i < boxes.length; i++) {
+            boxes[i].style.display = "flex";
+        }
+        currenItem += 4;
 
-    if (currenItem >= boxes.length) {
-        loadMoreBtn.style.display = "none";
-    }
+        if (currenItem >= boxes.length) {
+            loadMoreBtn.style.display = "none";
+        }
+    };
 }
-
-const carritoDOM = document.getElementById("carrito");
-const listaelementos1 = document.getElementById("lista-1");
-const lista = document.querySelector("#lista-carrito tbody");
-const vaciarCarritoBtn = document.getElementById("vaciar-carrito");
 
 cargarEventListeners();
 
 function cargarEventListeners() {
-    listaelementos1.addEventListener("click", comprarElemento);
+    listaProductos.addEventListener("click", comprarElemento);
     carritoDOM.addEventListener("click", eliminarElemento);
     vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
 }
@@ -169,9 +170,7 @@ function eliminarElemento(e) {
     e.preventDefault();
     if (e.target.classList.contains("borrar")) {
         const id = Number(e.target.dataset.id);
-        const indice = carrito.findIndex(
-            producto => producto.id === id
-        );
+        const indice = carrito.findIndex(producto => producto.id === id);
         if (indice !== -1) {
             carrito.splice(indice, 1);
         }
@@ -184,8 +183,6 @@ function vaciarCarrito(e) {
     carrito = [];
     insertarCarrito();
 }
-
-const totalCarrito = document.getElementById("total-carrito");
 
 function calcularTotal() {
     let total = 0;

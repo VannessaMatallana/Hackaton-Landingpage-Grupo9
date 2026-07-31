@@ -1,6 +1,6 @@
 :root {
     --color-primario-oscuro: #5C1D13; 
-    --color-secundario: #D96B27;      
+    --color-secundario: #D96B27;       
     --color-acento-amarillo: #F2A922; 
     --color-fondo-claro: #FDFBF7;     
     --color-tarjeta: #FFF9F0;         
@@ -23,11 +23,6 @@ h1, h2, h3, .navbar-brand .marca {
 
 p, a {
     font-family: var(--fuente-cuerpo);
-}
-
-.navbar-brand .marca {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
 }
 
 .header-principal {
@@ -127,16 +122,6 @@ p, a {
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-}
-
-.btn {
-    background-color: var(--color-secundario);
-    color: white;
-    border: none;
-}
-
-.btn:hover {
-    background-color: var(--color-primario-oscuro);
 }
 
 .cinta-mexicana {
